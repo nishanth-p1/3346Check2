@@ -200,7 +200,7 @@ def train_model(ticker, look_back=100, epochs=50, batch_size=32, neurons=100, dr
     print(f"{'='*60}\n")
     
     return model, scaler_features, scaler_target, feature_cols
-
+    
 if __name__ == "__main__":
     import sys
     

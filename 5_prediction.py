@@ -149,7 +149,7 @@ def predict_next_7_days(ticker, look_back=100):
             price_change_ratio = pred_price / predictions[day-1] if predictions[day-1] > 0 else 1.0
         else:
             # For first prediction, estimate change from last known price
-            last_price = stock_data['Close'].iloc[-1]
+            last_price = float(stock_data['Close'].iloc[-1])
             price_change_ratio = pred_price / last_price if last_price > 0 else 1.0
         
         # Update price-related features (assuming first few are price-related)
