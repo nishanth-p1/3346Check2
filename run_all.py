@@ -29,7 +29,7 @@ def main():
         sys.exit(1)
     
     ticker = sys.argv[1].upper()
-    start_date = sys.argv[2] if len(sys.argv) > 2 else "2020-01-01"
+    start_date = sys.argv[2] if len(sys.argv) > 2 else "2015-01-01"
     
     print(f"\n{'='*70}")
     print(f"Unified Stock Predictor - Full Pipeline")
@@ -41,8 +41,8 @@ def main():
         ("1_data_collection.py", [start_date]),
         ("2_sentiment_analysis.py", []),
         ("3_data_preparation.py", []),
-        ("4_model_training.py", []),
-        ("5_prediction.py", [])
+        # ("4_model_training.py", []),
+        # ("5_prediction.py", [])
     ]
     
     for script, args in steps:
